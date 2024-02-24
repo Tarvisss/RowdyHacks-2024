@@ -7,6 +7,16 @@ import { Button } from "@/components/ui/button"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose
+} from "@/components/ui/dialog"
 
 export default function Component() {
   return (
@@ -16,17 +26,37 @@ export default function Component() {
           <h1 className="text-lg font-bold tracking-tighter sm:text-2xl">Favorite Color Poll</h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
-          <Button size="sm" variant="outline">
-            Red
-          </Button>
-          <Button size="sm" variant="outline">
-            Green
-          </Button>
-          <Button size="sm" variant="outline">
-            Blue
-          </Button>
+        <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" className = "bg-green-600 text-white">Login</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Edit profile</DialogTitle>
+         
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+              Name
+            </Label>
+            <Input id="name" value="" className="col-span-3" />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Phone Number
+            </Label>
+            <Input id="username" value="" className="col-span-3" />
+          </div>
+        </div>
+        <DialogClose asChild>
+          <Button type="submit">Save changes</Button>
+        </DialogClose>
+      </DialogContent>
+    </Dialog>
         </nav>
       </header>
+
       <main className="grid gap-4 md:gap-6 p-4 md:p-6">
         <Card>
           <CardHeader className="bg-yellow-100 dark:bg-yellow-300">
