@@ -34,6 +34,7 @@ export default function Component() {
           <h1 className="text-lg font-bol d tracking-tighter sm:text-2xl">Favorite Color Poll</h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
+        <Button type="createPoll">Create Poll</Button>
           <Login />
         </nav>
       </header>
