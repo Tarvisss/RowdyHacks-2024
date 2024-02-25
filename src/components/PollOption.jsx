@@ -4,13 +4,13 @@ import { Input } from "@/components/ui/input"
 
 export default function PollOption(props) {
     return(
-      <div className="form-check">
+      <div className="form-check" >
         <label>
           <input
             type="radio"
             name="react-tips"
             value={props.option}
-            className="form-check-input"
+            className
           />
           {props.option}
         </label>
