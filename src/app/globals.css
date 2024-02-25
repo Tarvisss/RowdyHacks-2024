@@ -74,7 +74,8 @@
   }
 
   body {
-    background-image: linear-gradient(to top right, rgb(0, 0, 0) , rgb(235, 224, 224));
+    background-image: url("https://wallpapers.com/images/hd/hd-big-mountains-and-dinosaur-2nqz1h03tmazp3sb.webp");
+    /*  */
     
     @apply bg-background text-foreground;
   }
@@ -95,7 +96,8 @@ font-size: larger;
 }
 
 #form-Id{
-  background-image: url("https://www.nps.gov/subjects/fossils/images/DINO-Allosaurus-fragilis-exhibit.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp");
+  background-image: linear-gradient(to top right, #092224 , rgb(235, 224, 224));
+  /* background-image: url("https://wallpapers.com/images/hd/hd-big-mountains-and-dinosaur-2nqz1h03tmazp3sb.webp"); */
  text-shadow: 2px 2px 2px black;
  color: aliceblue;
  
@@ -105,4 +107,39 @@ font-size: larger;
  text-shadow: 2px 2px 2px black;
  color: aliceblue;
 
+}
+
+#radio-Id{
+  background-image: linear-gradient(to top right, #092224 , rgb(235, 224, 224));
+  text-shadow: 2px 2px 2px black;
+ color: aliceblue;
+
+  margin: 4px;
+  padding-top: 4px;
+  border-radius: 1.2rem;
+}
+#radio-Id:hover{
+  background-image: linear-gradient(to top right, rgb(116, 155, 165) , rgb(235, 224, 224));
+  text-shadow: 3px 3px 4px black;
+ color: white;
+
+
+  margin: 4px;
+  padding-top: 4px;
+  border-radius: 1.5rem;
+}
+#card{
+ 
+  
+}
+h1{
+  font-size: 1.5rem;
+
+}
+#main-h1{
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
