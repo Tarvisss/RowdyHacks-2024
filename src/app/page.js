@@ -32,7 +32,34 @@ export default function Component() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Login</DialogTitle>
+         
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+              Phone Number
+            </Label>
+            <Input id="name" value="" className="col-span-3" />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Password
+            </Label>
+            <Input id="username" value="" className="col-span-3" />
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4 py-4">
+        <DialogClose asChild>
+          <Button type="submit">Login</Button>
+        </DialogClose>
+        <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" className = "bg-green-600 text-white">Sign Up</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Login</DialogTitle>
          
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -48,10 +75,21 @@ export default function Component() {
             </Label>
             <Input id="username" value="" className="col-span-3" />
           </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Password
+            </Label>
+            <Input id="password" value="" className="col-span-3" />
+          </div>
         </div>
+
         <DialogClose asChild>
-          <Button type="submit">Save changes</Button>
+          <Button type="submit">Submit</Button>
         </DialogClose>
+
+      </DialogContent>
+    </Dialog>
+        </div>
       </DialogContent>
     </Dialog>
         </nav>
