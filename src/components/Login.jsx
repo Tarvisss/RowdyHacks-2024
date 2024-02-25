@@ -42,7 +42,10 @@ export default function Login(props) {
       .then(res => {
         console.log(res);
         if(res.status == 200){
-          props.changeUser(res.data);
+          const config = {
+              headers: { Authorization: `Bearer ${res.data.token}` }
+          }; 
+          props.changeUser(config);
         }
       })
       .catch(err => {
