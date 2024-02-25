@@ -14,19 +14,37 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
+import axios from "axios"
+
+
 export default function Login() {
   // REACT STATES
   const [phoneNumber, setPhoneNumber] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const onLogin = (event) => {
+  const onLogin = () => {
     console.log(phoneNumber, password);
-    //TODO: push info to backend
+    //TODO: push info to backend    
   };
-  const onCreateNewAccount = (event) => {
+
+
+  const onCreateNewAccount = () => {
     console.log(username, phoneNumber, password);
-    //TODO: push info to backend
+    const newAccount = JSON.stringify({
+      name: username,
+      phone: phoneNumber,
+      password: password
+    });
+    console.log("json:", newAccount);
+    axios
+      .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/register", newAccount)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+       console.log(err.message);
+      });
   };
 
 
@@ -46,7 +64,7 @@ export default function Login() {
             </Label>
             <Input 
               id="name" 
-              value={phoneNumber} 
+              value={phoneNumber}
               onChange={e => setPhoneNumber(e.target.value)} 
               className="col-span-3" 
               type="text" />
