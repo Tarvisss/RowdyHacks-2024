@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label"
 import axios from "axios"
 import { useState } from "react"
  
-export default function CreatePoll(props) {
+export default function CreatePoll() {
 
 const [title, setTitle] = useState("");
 const [description, setDescription] = useState("");
@@ -31,7 +31,7 @@ const submitinfo = {
   notes: setnotes,
 }
   axios
-  .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/polls", submitinfo, props.currUser )
+  .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/polls", submitinfo )
   .then(res => {
     console.log(res);
     if(res.status == 200){
@@ -96,7 +96,7 @@ console.log(event.target.value);
             />
 
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
+          {/* <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="time" className="text-right">
               Notes:
             </Label>
@@ -108,7 +108,7 @@ console.log(event.target.value);
             type="text"
             />
 
-          </div>
+          </div> */}
         </div>
         <DialogClose asChild>
           <Button type="submit" onClick={submitPoll}>Submit</Button>
