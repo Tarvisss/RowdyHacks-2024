@@ -2,11 +2,21 @@
 
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import PollOption from "./PollOption"
+import { useEffect, useState } from "react"
 
 export default function PollComponent() {
-
+  // REACT STATES
+  const [pollInfo, setPollInfo] = useState({})
   
 
+  // CONNECTION TO BACKEND
+  useEffect(() => {
+    // TODO: use axios to connect to the backend and pull all the poll info
+    // and then use that poll info to create the poll below
+  }, []);
+
+
+  // HTML UI SECTION
   return(
     <main className="grid gap-4 md:gap-6 p-4 md:p-6">
     <Card>
