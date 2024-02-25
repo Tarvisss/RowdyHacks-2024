@@ -26,8 +26,8 @@ export default function Component() {
   return (
     <div className="w-full min-h-screen ">
       <div className="grid grid-cols-2 place-items-center gap-4 p-4">
-        <h1 id = "notif" className="text-center bg-red-500 w-max p-4 shadow-m rounded-m">Poll ends at 3:00</h1>
-        <h1 id = "notif" className="text-center  bg-red-500 w-max p-4 shadow-m rounded-m">Game is: on at turf field at 3:00</h1>
+        <h1 id = "notif" >Poll ends at 3:00</h1>
+        <h1 id = "notif">Game is: on at turf field at 3:00</h1>
       </div>
       <header className="flex items-center py-4 md:py-6 lg:py-8 px-4 md:px-6">
         <div className="space-y-1">
