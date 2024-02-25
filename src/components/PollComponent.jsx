@@ -3,6 +3,7 @@
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import PollOption from "./PollOption"
 import { useEffect, useState } from "react"
+import axios from "axios"
 
 export default function PollComponent() {
   // REACT STATES
@@ -11,10 +12,16 @@ export default function PollComponent() {
 
   // CONNECTION TO BACKEND
   useEffect(() => {
-    // TODO: use axios to connect to the backend and pull all the poll info
-    // and then use that poll info to create the poll below
-  }, []);
-
+    axios
+      .get("https://rowdyhacks-30994aeafc3f.herokuapp.com/")
+      .then((res) => {
+        console.log(res);
+        setPollInfo(res.data);
+      })
+      .catch(err => {
+       console.log(err.message);
+      });
+  }, [])
 
   // HTML UI SECTION
   return(
