@@ -25,7 +25,24 @@ export default function Login(props) {
 
   const onLogin = () => {
     console.log(phoneNumber, password);
-    //TODO: push info to backend    
+    const account = {
+      phone: phoneNumber,
+      password: password
+    };
+    axios
+      .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/login", account, props.changeUser)
+      .then(res => {
+        console.log(res);
+        if(res.status == 200){
+          const config = {
+              headers: { Authorization: `Bearer ${res.data.token}` }
+          }; 
+          props.changeUser(config);
+        }
+      })
+      .catch(err => {
+       console.log(err.message);
+      });    
   };
 
 
