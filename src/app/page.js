@@ -19,7 +19,7 @@ import {
   DialogClose
 } from "@/components/ui/dialog"
 import PollComponent from "@/components/PollComponent"
-
+import CreatePoll from "@/components/CreatePoll"
 
 
 export default function Component() {
@@ -34,11 +34,11 @@ export default function Component() {
           <h1 id="main-h1">What Time Is Game Time</h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
-        <Button type="createPoll">Create Poll</Button>
+          <CreatePoll />
           <Login />
         </nav>
       </header>
-     <PollComponent />
+      <PollComponent />
 
     </div>
   )
