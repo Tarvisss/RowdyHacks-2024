@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Login from "../components/Login"
 import {
   Dialog,
   DialogContent,
@@ -27,37 +28,10 @@ export default function Component() {
       </div>
       <header className="flex items-center py-4 md:py-6 lg:py-8 px-4 md:px-6">
         <div className="space-y-1">
-          <h1 className="text-lg font-bold tracking-tighter sm:text-2xl">Favorite Color Poll</h1>
+          <h1 className="text-lg font-bol d tracking-tighter sm:text-2xl">Favorite Color Poll</h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="outline" className="bg-green-600 text-white">Login</Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Edit profile</DialogTitle>
-
-              </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="name" className="text-right">
-                    Name
-                  </Label>
-                  <Input id="name" value="" className="col-span-3" />
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="username" className="text-right">
-                    Phone Number
-                  </Label>
-                  <Input id="username" value="" className="col-span-3" />
-                </div>
-              </div>
-              <DialogClose asChild>
-                <Button type="submit">Save changes</Button>
-              </DialogClose>
-            </DialogContent>
-          </Dialog>
+          <Login />
         </nav>
       </header>
 
