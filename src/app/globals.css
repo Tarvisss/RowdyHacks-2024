@@ -68,10 +68,13 @@
 
 @layer base {
   * {
+    --destructive-foreground: 210 40% 98%;
+   
     @apply border-border;
   }
 
   body {
+    background-image: linear-gradient(to top right, rgb(185, 52, 52) , rgb(235, 224, 224));
     @apply bg-background text-foreground;
   }
 
@@ -80,4 +83,14 @@
 #notif {
   border-radius: .375rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);;
+}
+
+.form-check{
+font-size: larger;
+
+}
+
+#form-Id{
+  background-image: url("https://www.nps.gov/subjects/fossils/images/DINO-Allosaurus-fragilis-exhibit.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp");
+  
 }
