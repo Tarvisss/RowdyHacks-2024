@@ -10,7 +10,7 @@ export default function PollOption(props) {
   }
 
   return(
-    <div className="form-check">
+    <div className="form-check pt-4">
       <label>
         <input
           type="radio"
