@@ -1,5 +1,5 @@
-
 'use client'
+
 import {
     Dialog,
     DialogContent,
@@ -17,7 +17,7 @@ import { useState } from "react"
 import axios from "axios"
 
 
-export default function Login() {
+export default function Login(props) {
   // REACT STATES
   const [phoneNumber, setPhoneNumber] = useState("");
   const [username, setUsername] = useState("");
@@ -31,16 +31,19 @@ export default function Login() {
 
   const onCreateNewAccount = () => {
     console.log(username, phoneNumber, password);
-    const newAccount = JSON.stringify({
+    const newAccount = {
       name: username,
       phone: phoneNumber,
       password: password
-    });
+    };
     console.log("json:", newAccount);
     axios
       .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/register", newAccount)
       .then(res => {
         console.log(res);
+        if(res.status == 200){
+          props.changeUser(res.data);
+        }
       })
       .catch(err => {
        console.log(err.message);

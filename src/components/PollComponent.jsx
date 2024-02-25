@@ -2,10 +2,10 @@
 
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import PollOption from "./PollOption"
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import axios from "axios"
 
-export default function PollComponent() {
+export default function PollComponent(props) {
   // REACT STATES
   const [pollInfo, setPollInfo] = useState({})
   
@@ -34,9 +34,9 @@ export default function PollComponent() {
   <CardContent>
 
         {/* ==== Poll Options ==== */}
-        <PollOption option="yes" />
-        <PollOption option="maybe" />
-        <PollOption option="no" />
+        <PollOption option="yes" currUser={props.currUser} />
+        <PollOption option="maybe" currUser={props.currUser}/>
+        <PollOption option="no" currUser={props.currUser}/>
 
       </CardContent>
     </Card>

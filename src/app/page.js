@@ -1,3 +1,5 @@
+"use client"
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/do5316icTTs
@@ -20,9 +22,16 @@ import {
 } from "@/components/ui/dialog"
 import PollComponent from "@/components/PollComponent"
 import CreatePoll from "@/components/CreatePoll"
+import { useEffect, useState } from "react"
 
 
 export default function Component() {
+  // REACT STATE
+  const [currUser, setCurrUser] = useState({});
+
+  
+
+
   return (
     <div className="w-full min-h-screen ">
       <div className="grid grid-cols-2 place-items-center gap-4 p-8">
@@ -34,11 +43,11 @@ export default function Component() {
           <h1 id="main-h1">What Time Is Game Time</h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
-          <CreatePoll />
-          <Login />
+          <CreatePoll currUser={currUser}/>
+          <Login currUser={currUser} changeUser={setCurrUser} />
         </nav>
       </header>
-      <PollComponent />
+      <PollComponent currUser={currUser}/>
 
     </div>
   )

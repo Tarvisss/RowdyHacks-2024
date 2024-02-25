@@ -1,8 +1,14 @@
 
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
+import { useEffect } from "react";
 
 export default function PollOption(props) {
+  
+  useEffect(() => {
+    console.log("user changed from poll option:", props.option, props.currUser);
+  }, [props.currUser]);
+
 
   function handleChange(event) {
     //TODO: add call to backend to set the vote to props.options
