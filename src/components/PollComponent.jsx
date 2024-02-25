@@ -18,7 +18,7 @@ export default function PollComponent() {
 
   // HTML UI SECTION
   return(
-    <main className="grid gap-4 md:gap-6 p-4 md:p-6">
+    <main className="grid gap-4 md:gap-6 md:p-6">
     <Card>
       <CardHeader className="bg-yellow-100 dark:bg-yellow-300">
         <CardTitle className="text-yellow-600">What is your favorite color?</CardTitle>
