@@ -18,27 +18,11 @@ export default function PollComponent() {
       </CardHeader>
       <CardContent>
 
+        {/* ==== Poll Options ==== */}
+        <PollOption option="yes" />
+        <PollOption option="maybe" />
+        <PollOption option="no" />
 
-        <form>
-
-          <PollOption option="yes" />
-          <PollOption option="maybe" />
-          <PollOption option="no" />
-
-          <div className="form-group">
-            <button className="btn btn-primary mt-2" type="submit">
-              Save
-            </button>
-          </div>
-
-        </form>
-        
-        <ul className="grid gap-2.5 sm:gap-3.5">
-          
-          
-          
-          
-        </ul>
       </CardContent>
     </Card>
     </main>
