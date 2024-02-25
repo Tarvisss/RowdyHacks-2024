@@ -10,7 +10,7 @@ export default function PollOption(props) {
   }
 
   return(
-    <div className="form-check hover:shadow-xl mt-4 rounded-lg bg-green-200">
+    <div id="radio-Id">
       <label>
         <input
           type="radio"
