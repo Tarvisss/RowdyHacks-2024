@@ -10,14 +10,14 @@ export default function PollOption(props) {
   }
 
   return(
-    <div className="form-check">
+    <div className="form-check hover:shadow-xl mt-4 rounded-lg bg-green-200">
       <label>
         <input
           type="radio"
           name="react-tips"
           value={props.option}
           onChange={handleChange}
-          className="form-check-input"
+          className="form-check-input m-4"
         />
         {props.option}
       </label>
