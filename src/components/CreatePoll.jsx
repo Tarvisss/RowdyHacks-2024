@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -11,8 +13,12 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useState } from "react"
  
 export default function CreatePoll() {
+
+const [pollTime, setPollTime] = useState("");
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -30,7 +36,14 @@ export default function CreatePoll() {
             <Label htmlFor="time" className="text-right">
               Time of Event:
             </Label>
-            <Input id="time" value="13:37" className="col-span-3" />
+          <Input 
+            id="time" 
+            value={pollTime} 
+            className="col-span-3" 
+            onChange={(e) => {setPollTime(e.target.value)}}
+            type="text"
+            />
+
           </div>
         </div>
         <DialogClose asChild>

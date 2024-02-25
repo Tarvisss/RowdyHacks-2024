@@ -40,7 +40,7 @@ export default function Component() {
       </div>
       <header className="flex items-center py-4 md:py-6 lg:py-8 px-4 md:px-6">
         <div className="space-y-1">
-          <h1 id="main-h1">What Time Is Game Time</h1>
+          <h1 id="main-h1"></h1>
         </div>
         <nav className="ml-auto flex gap-4 md:gap-8">
           <CreatePoll currUser={currUser}/>

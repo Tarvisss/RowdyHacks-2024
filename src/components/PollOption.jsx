@@ -12,6 +12,17 @@ export default function PollOption(props) {
 
   function handleChange(event) {
     //TODO: add call to backend to set the vote to props.options
+    axios
+      .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/register", newAccount)
+      .then(res => {
+        console.log(res);
+        if(res.status == 200){
+          props.changeUser(res.data);
+        }
+      })
+      .catch(err => {
+       console.log(err.message);
+      });
     console.log(event.target.value);
   }
 
