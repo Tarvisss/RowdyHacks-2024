@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label"
 import axios from "axios"
 import { useState } from "react"
  
-export default function CreatePoll() {
+export default function CreatePoll(props) {
 
 const [title, setTitle] = useState("");
 const [description, setDescription] = useState("");
@@ -31,7 +31,7 @@ const submitinfo = {
   notes: setnotes,
 }
   axios
-  .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/polls", submitinfo )
+  .post("https://rowdyhacks-30994aeafc3f.herokuapp.com/polls", submitinfo, props.currUser )
   .then(res => {
     console.log(res);
     if(res.status == 200){
