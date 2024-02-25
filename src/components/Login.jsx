@@ -26,16 +26,16 @@ export default function Login() {
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+            <Label htmlFor="name" className="text-right"type="text">
               Phone Number
             </Label>
-            <Input id="name" value="" className="col-span-3" />
+            <Input id="name"  className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label htmlFor="username" className="text-right"type="text">
               Password
             </Label>
-            <Input id="username" value="" className="col-span-3" />
+            <Input id="username"  className="col-span-3" type="text"/>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 py-4">
@@ -46,30 +46,35 @@ export default function Login() {
       <DialogTrigger asChild>
         <Button variant="outline" className = "bg-green-600 text-white">Sign Up</Button>
       </DialogTrigger>
+      
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Login</DialogTitle>
+          <DialogTitle>Create New Account</DialogTitle>
          
         </DialogHeader>
         <div className="grid gap-4 py-4">
+        
           <div className="grid grid-cols-4 items-center gap-4">
+            
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" value="" className="col-span-3" />
+            <Input id="name"  className="col-span-3" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Phone Number
             </Label>
-            <Input id="username" value="" className="col-span-3" />
+            <Input id="username"  className="col-span-3" type="text" />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label htmlFor="username" className="text-right" type="text">
               Password
             </Label>
-            <Input id="password" value="" className="col-span-3" />
+            <Input id="password"  className="col-span-3" />
+            
           </div>
+        
         </div>
 
         <DialogClose asChild>
