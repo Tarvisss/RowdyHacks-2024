@@ -3,12 +3,24 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 
 export default function PollOption(props) {
-    return(
-<li>
-        <Label className="flex items-center pt-4">
-          <Input className="w-7 h-8 rounded-full" type="checkbox" />
-          <span className="ml-2.5 text-sm sm:text-base">{props.option}</span>
-        </Label>
-</li>
 
-)}
+  function handleChange(event) {
+    //TODO: add call to backend to set the vote to props.options
+    console.log(event.target.value);
+  }
+
+  return(
+    <div className="form-check">
+      <label>
+        <input
+          type="radio"
+          name="react-tips"
+          value={props.option}
+          onChange={handleChange}
+          className="form-check-input"
+        />
+        {props.option}
+      </label>
+    </div>
+  )
+}
