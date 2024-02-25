@@ -40,9 +40,6 @@ export default function Component() {
       </header>
      <PollComponent />
 
-     
-     
-      <Button className="mx-4 md:mx-6 w-full">Submit</Button>
     </div>
   )
 }
